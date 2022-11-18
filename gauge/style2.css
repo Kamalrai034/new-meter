@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 324px;
+    max-height: 324px;
+}
+.gauge{
+    width: 260px;
+    height: 260px;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    border: 32px solid #DBEAFE;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom: 32px solid transparent;
+    /* outline: 1px dashed blue;
+    outline-offset: -50px; */
+    border-left: 32px solid #BFDBFE;
+    position: relative;
+}
+
+.gauge__tip{
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: 3px;
+    left: 0px;
+    background-color: #BFDBFE;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(131deg);
+}
+
+.gauge::after{
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: #BFDBFE;
+    bottom: 2%;
+    left: -1%;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(233deg);
+}
+
+.gauge::before{
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: #DBEAFE;
+    bottom: 2%;
+    right: -1%;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(-52deg);
+}
+
+.gauge__outline{
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    top: 9%;
+    left: 9%;
+    background-color: #F5F5F5;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px dashed blue;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom: 1px dashed transparent;
+}
+
+.gauge__inner-circle{
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 87px;
+    left: 86px;
+    background-color: #DBEAFE;
+    border-radius: 50%;
+    border: 1px dashed #2563EB;
+}
+
+.gauge__needle{
+    background-color: #BFDBFE;
+    clip-path: polygon(100% 0%,100% 100%, 0 50%);
+    height: 5%;
+    left: 0%;
+    position: absolute;
+    top: 48%;
+    transform: rotate(50deg);
+    transform: translate(-50% -50%);
+    transform-origin: center right;
+    width: 50%;
+}
+
+.gauge__left{
+    left: 0%;
+    top: 48%;
+    position: absolute;
+    width: 50%;
+    border: 1px dashed blue;
+}
